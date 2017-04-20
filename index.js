@@ -69,12 +69,17 @@ let update = ()=>{
 	})
 	
 	console.log('Requesting RSS feed.')
-	let req = request(process.env.RSS_URL)
+	let req = request({
+		url: process.env.RSS_URL,
+		headers: {
+			'User-Agent': process.env.USER_AGENT || 'Mozilla/5.0 (x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3069.0 Safari/537.36'
+		}
+	})
 	req.on('response', function(res) {
 		let stream = this
 
 		if (res.statusCode !== 200) {
-			this.emit('error', new Error('Bad status code'))
+			this.emit('error', new Error('Bad status code: ' + res.statusCode))
 		} else {
 			console.log('Streaming RSS response to parser.')
 			stream.pipe(feedparser)
