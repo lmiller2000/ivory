@@ -1,6 +1,7 @@
 FROM node:7.9.0-alpine
 
 WORKDIR /
+ADD README.md /
 ADD package.json /
 RUN npm install
 
