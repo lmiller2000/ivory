@@ -1,5 +1,6 @@
 # Ivory - Mastodon RSS Bot
-
+[![Build Status](https://travis-ci.org/skhameneh/ivory.svg?branch=master)](https://travis-ci.org/skhameneh/ivory)  
+  
 RSS bot for Mastodon
 
 ## Usage
