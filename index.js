@@ -34,11 +34,9 @@ let update = ()=>{
 		let meta = stream.meta
 		let item
 		
-		let itemsToAdd = []
-		
 		while(item = stream.read()) {
 			if(guids.indexOf(item.guid) === -1) {
-				guids.push()
+				guids.push(item.guid)
 				
 				newItems.push({
 					guid: item.guid,
@@ -64,7 +62,7 @@ let update = ()=>{
 		}
 		console.log('Posting new items, count ' + newItems.length + '.')
 		for(let item of newItems) {
-			console.log('Item', item)
+			console.log('Posting', item.guid, item.title)
 			postItem(item)
 		}
 		newItems = []
