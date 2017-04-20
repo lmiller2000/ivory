@@ -5,11 +5,10 @@ RSS bot for Mastodon
 
 ## Usage
   
-No need to clone the repo, copy and edit the docker-compose.yml file and run:
+No need to clone the repo, copy and edit the [docker-compose.yml](https://github.com/skhameneh/ivory/blob/master/docker-compose.yml "docker-compose.yml") file and run:
 ```
 docker-compose -f docker-compose.yml
 ```
-See https://github.com/skhameneh/ivory/blob/master/docker-compose.yml
 
 And if you don't have an Oauth token, see:  
 https://tinysubversions.com/notes/mastodon-bot/
