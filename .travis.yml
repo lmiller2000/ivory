@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "7"
+  
+services:
+  - docker
+
+script:
+  - docker build -t $DOCKER_PUSH_USER/$DOCKER_PUSH_REPO .
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push $DOCKER_PUSH_USER/$DOCKER_PUSH_REPO;
+    fi

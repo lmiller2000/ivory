@@ -1,0 +1,6 @@
+ivory:
+  image: skhameneh/ivory
+  environment:
+    - MASTODON_TOKEN=
+    - MASTODON_URL=https://mastodon.engineering/api/v1/
+    - RSS_URL=

@@ -1,0 +1,25 @@
+{
+  "name": "ivory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skhameneh/ivory.git"
+  },
+  "author": "Shawn Khameneh",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/skhameneh/ivory/issues"
+  },
+  "homepage": "https://github.com/skhameneh/ivory#readme",
+  "dependencies": {
+    "feedparser": "2.2.0",
+    "mastodon": "1.1.1",
+    "request": "2.81.0"
+  }
+}
