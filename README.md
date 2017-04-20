@@ -7,7 +7,7 @@ RSS bot for Mastodon
   
 No need to clone the repo, copy and edit the [docker-compose.yml](https://github.com/skhameneh/ivory/blob/master/docker-compose.yml "docker-compose.yml") file and run:
 ```
-docker-compose -f docker-compose.yml
+docker stack deploy -c docker-compose.yml ivory
 ```
 
 And if you don't have an Oauth token, see:  
